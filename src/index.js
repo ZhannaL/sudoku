@@ -61,7 +61,7 @@ const stepBackStack = (matr, stack) => {
   stepBackStack(matr, stack);
 };
 
-const solveSudoku = matrix => {
+module.exports = function solveSudoku(matrix) {
   const stack = [];
   if (!findZeroIndex(matrix)) return matrix;
 
@@ -73,6 +73,3 @@ const solveSudoku = matrix => {
 
   return matrix;
 };
-
-module.exports.findZeroIndex = findZeroIndex;
-module.exports.solveSudoku = solveSudoku;
